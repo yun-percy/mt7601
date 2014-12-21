@@ -43,6 +43,7 @@ USB_DEVICE_ID rtusb_dev_id[] = {
 	{USB_DEVICE(0x148f,0x6370)}, /* Ralink 6370 */
 	{USB_DEVICE(0x148f,0x7601)}, /* MT 6370 */
 	{USB_DEVICE(0x148f,0x760b)}, /* 360 wifi */
+	{USB_DEVICE(0x2a5f,0x1000)}, /* Tencent wifi QQ */
 #endif /* MT7601U */
 	{ }/* Terminating entry */
 };
