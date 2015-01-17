@@ -45,6 +45,7 @@ What is important is the system no longer crashes, and disconnection are rare.
 Generally better than before.
 
 Tested with kernels:
+3.12.26-1.20140808git4ab8abb.rpfr20.armv6hl.bcm2708
 3.15.10-200.fc20.x86_64
 3.16.1-301.fc21.x86_64
 3.17.0-0.rc2.git0.1.fc22.x86_64
