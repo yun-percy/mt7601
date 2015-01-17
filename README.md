@@ -10,7 +10,14 @@ Unfortunately, the driver is not part of the Linux kernel source tree (yet?). Th
 * file `DPO_MT7601U_LinuxSTA_3.0.0.4_20130913-Linux-3.17.0-v2.patch`
  has been applied
 
-The patch improves stability and performance for kernels >= 3.x
+The patch improves stability and performance for kernels >= 3.x and has been tested with the following kernels:
+
+- 3.15.10-200.fc20.x86_64
+- 3.16.1-301.fc21.x86_64
+- 3.16.1-301.fc21.i686
+- 3.17.0-0.rc2.git3.1.fc22.i686
+- 3.17.0-0.rc2.git3.1.fc22.x86_64
+- 3.12.26-1.20140808git4ab8abb.rpfr20.armv6hl.bcm2708
 
 ### Usage
 
@@ -29,6 +36,7 @@ If the module has loaded OK, you should see `mt7601Usta` listed in the output of
 
 If all goes well, you can permanently install the driver with `make install`.
 
+
 ### History
 
 On 26 Aug, 2014 user **@poma** posted to the [linux-wireless](http://wireless.kernel.org/en/developers/MailingLists) mailing list discussing the poor state of driver support for this chipset. Thread can be seen here:
@@ -44,14 +52,6 @@ Device now works more or less OK but slow, max. 10 Mbit, although connectable is
 What is important is the system no longer crashes, and disconnection are rare.
 Generally better than before.
 
-Tested with kernels:
-3.12.26-1.20140808git4ab8abb.rpfr20.armv6hl.bcm2708
-3.15.10-200.fc20.x86_64
-3.16.1-301.fc21.x86_64
-3.17.0-0.rc2.git0.1.fc22.x86_64
-
-and with debug kernel:
-3.17.0-0.rc2.git1.1.fc22.x86_64
 ```
 
 A second patch was released on 31 Aug, 2014 with the following comment:
@@ -60,12 +60,6 @@ A second patch was released on 31 Aug, 2014 with the following comment:
 A new patch[1] mainly based on patches at 
 https://github.com/ashaffer/rt3573sta
 and several network throughput tests via the Iperf.
-Tested with kernels:
-- 3.15.10-200.fc20.x86_64
-- 3.16.1-301.fc21.x86_64
-- 3.17.0-0.rc2.git3.1.fc22.x86_64
-- 3.16.1-301.fc21.i686
-- 3.17.0-0.rc2.git3.1.fc22.i686
 ```
 
 ### Credits
