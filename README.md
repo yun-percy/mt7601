@@ -23,19 +23,32 @@ The patch improves stability and performance for kernels >= 3.x and has been tes
 
 First install kernel-devel for your Linux distro
 
-```
-git clone https://github.com/porjo/mt7601.git
-cd mt7601/src
-make
-mkdir -p /etc/Wireless/RT2870STA/
-cp RT2870STA.dat /etc/Wireless/RT2870STA/
-insmod os/linux/mt7601Usta.ko
+```sh
+$ git clone https://github.com/porjo/mt7601.git
+$ cd mt7601/src
+$ make
+$ mkdir -p /etc/Wireless/RT2870STA/
+$ cp RT2870STA.dat /etc/Wireless/RT2870STA/
+$ insmod os/linux/mt7601Usta.ko
 ```
 
 If the module has loaded OK, you should see `mt7601Usta` listed in the output of `lsmod` and a new network interface `ra0` should be present in the output of `ip link`.
 
 If all goes well, you can permanently install the driver with `make install`.
 
+#### Gentoo
+
+In order to successfully compile this driver for Gentoo, you must compile your kernel with the appropriate wireless extensions included. One way to do that is by enabling *Cisco/Aironet 34X/35X/4500/4800 PCMCIA cards* wireless module. If you see errors when compiling the driver, check to see if you have the necessary wireless extensions by running `zgrep -i wext /proc/config.gz`. The output should look something like:
+
+```
+CONFIG_WEXT_CORE=y
+CONFIG_WEXT_PROC=y
+CONFIG_WEXT_SPY=y
+CONFIG_WEXT_PRIV=y
+CONFIG_CFG80211_WEXT=y
+```
+
+More discussion can be found [here](http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/2013-January/005587.html)
 
 ### History
 
