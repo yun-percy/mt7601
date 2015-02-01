@@ -50,6 +50,15 @@ CONFIG_CFG80211_WEXT=y
 
 More discussion can be found [here](http://rt2x00.serialmonkey.com/pipermail/users_rt2x00.serialmonkey.com/2013-January/005587.html)
 
+#### Debian/Ubuntu
+
+There is a PPA repo available containing a DKMS-capable package based on this repo:
+
+https://code.launchpad.net/~thopiekar/+archive/ubuntu/mt7601
+
+Thanks to @thopiekar 
+
+
 ### History
 
 On 26 Aug, 2014 user **@poma** posted to the [linux-wireless](http://wireless.kernel.org/en/developers/MailingLists) mailing list discussing the poor state of driver support for this chipset. Thread can be seen here:
