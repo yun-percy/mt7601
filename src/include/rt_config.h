@@ -28,8 +28,6 @@
 #ifndef	__RT_CONFIG_H__
 #define	__RT_CONFIG_H__
 
-#define RLT_MAC 1
-
 /* #define WDS_VLAN_SUPPORT */
 
 #include "rtmp_comm.h"
