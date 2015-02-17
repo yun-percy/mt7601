@@ -16,11 +16,6 @@ Unfortunately, there is no driver in Linux kernel source tree which can work wit
 
 *Because there is very little chance that this driver will ever become part of the Linux kernel, a new mac80211 driver  was written from scratch. You can download it from https://github.com/kuba-moo/mt7601u. Note that the new driver requires quite recent kernels to run (3.19 or newer).*
 
-This repository contains:
-* source code from [`DPO_MT7601U_LinuxSTA_3.0.0.4_20130913.tar.bz2`](http://www.mediatek.com/en/downloads/mt7601u-usb/) (md5sum `5f440dccc8bc952745a191994fc34699`)
-* file `DPO_MT7601U_LinuxSTA_3.0.0.4_20130913-Linux-3.17.0-v2.patch`
- has been applied
-
 ### Usage
 
 First install kernel-devel for your Linux distro
