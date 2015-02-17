@@ -1,16 +1,11 @@
 ## MT7601U Linux driver
 
-Many cheap USB wifi dongles use the MT7601U chip.
+Many cheap USB wifi dongles use the MediaTek MT7601U chip.
 
 <img src="http://porjo.github.io/mt7601/dongle1.jpg" width="150">
 <img src="http://porjo.github.io/mt7601/dongle2.jpg" width="150">
 
-Unfortunately, the driver is not part of the Linux kernel source tree (yet?). This repository contains:
-* source code from [`DPO_MT7601U_LinuxSTA_3.0.0.4_20130913.tar.bz2`](http://www.mediatek.com/en/downloads/mt7601u-usb/) (md5sum `5f440dccc8bc952745a191994fc34699`) 
-* file `DPO_MT7601U_LinuxSTA_3.0.0.4_20130913-Linux-3.17.0-v2.patch`
- has been applied
-
-The patch improves stability and performance for kernels >= 3.x and has been tested with the following kernels:
+Unfortunately, there is no driver in Linux kernel source tree which can work with this chip, yet. This repository is based on the original driver released by MediaTek which was rejected from Linux kernel because of the poor code quality. The repository includes various stability and performance improvements for kernels >= 3.x and has been tested with the following kernels:
 
 - 3.15.10-200.fc20.x86_64
 - 3.16.1-301.fc21.x86_64
@@ -18,6 +13,13 @@ The patch improves stability and performance for kernels >= 3.x and has been tes
 - 3.17.0-0.rc2.git3.1.fc22.i686
 - 3.17.0-0.rc2.git3.1.fc22.x86_64
 - 3.12.26-1.20140808git4ab8abb.rpfr20.armv6hl.bcm2708
+
+*Because there is very little chance that this driver will ever become part of the Linux kernel, a new mac80211 driver  was written from scratch. You can download it from https://github.com/kuba-moo/mt7601u. Note that the new driver requires quite recent kernels to run (3.19 or newer).*
+
+This repository contains:
+* source code from [`DPO_MT7601U_LinuxSTA_3.0.0.4_20130913.tar.bz2`](http://www.mediatek.com/en/downloads/mt7601u-usb/) (md5sum `5f440dccc8bc952745a191994fc34699`)
+* file `DPO_MT7601U_LinuxSTA_3.0.0.4_20130913-Linux-3.17.0-v2.patch`
+ has been applied
 
 ### Usage
 
