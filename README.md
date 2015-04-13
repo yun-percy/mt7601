@@ -92,20 +92,32 @@ and several network throughput tests via the Iperf.
 ------
 
 > sudo apt-get install linux-headers-generic build-essential git
+> 
 > sudo apt-get install git
+> 
 > git clone https://github.com/porjo/mt7601.git 
+> 
 > cd mt7601/src
+> 
 > make
+> 
 > sudo make install
+> 
 > sudo mkdir -p /etc/Wireless/RT2870STA/
+> 
 > sudo cp RT2870STA.dat /etc/Wireless/RT2870STA/
+> 
 > sudo modprobe mt7601Usta
 
 执行最后一步，你就可以搜到无线网了。如果你升级了你的Linux内核的话，需要重新执行：
 
 > cd mt7601/src
+> 
 > make clean
+> 
 > make
+> 
 > sudo make install
+> 
 > sudo modprobe mt7601Usta
 
